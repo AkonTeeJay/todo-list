@@ -1,0 +1,152 @@
+/* GENERAL RESETS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:focus:not(select) {
+    outline: 1px solid #aa523a;
+}
+
+body {
+    background: linear-gradient(120deg, #c5a642, #e27c60);
+    color: white;
+    font-family: sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 1.5rem;
+}
+
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,
+form button {
+    padding: .5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+
+form button {
+    color: #e27c60;
+    border: 1px solid currentColor;
+    background-color: white;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+form button:hover {
+    background-color: #e27c60;
+    color: white;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    list-style: none;
+    min-width: 70%;
+}
+
+.todo-div {
+    background-color: white;
+    color: black;
+    margin: 0.5rem;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .5s ease;
+}
+
+.todo-li {
+    flex: 1;
+    padding: .5rem;
+}
+
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: #ff6f47;
+    cursor: pointer;
+    width: 10rem;
+    padding: 1rem;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #ff6f47;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background-color: white;
+    border: 1px solid #ff6f47;
+    color: #ff6f47;
+}
+
+.show{
+    display: flex;
+}
+
+.hide{
+    display: none;
+}
+
+.trash-btn,
+.done-btn {
+    background-color: #ff6f47;
+    color: white;
+    padding: 1rem;
+    border: none;
+    font-size: 1.35rem;
+    cursor: pointer;
+}
+
+.done-btn {
+    background-color: rgb(37, 206, 37);
+}
+
+.trash-btn{
+    font-size: 1.59rem;
+}
+
+/* animation */
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+/* completed style */
+.completed {
+    text-decoration: line-through;
+    opacity: .5;
+}
